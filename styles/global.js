@@ -25,6 +25,14 @@ const globalStyles = StyleSheet.create({
     height: 150,
     borderRadius: 10,
   },
+  textInput: {
+    borderWidth: 2,
+    borderColor: '#ddd',
+    paddingHorizontal: 15,
+    paddingVertical: 10,
+    marginBottom: 10,
+    borderRadius: 10,
+  },
 });
 
 export default globalStyles;

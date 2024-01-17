@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-import {SafeAreaView, ScrollView, Text, TextInput, View} from 'react-native';
+import {
+  FlatList,
+  SafeAreaView,
+  ScrollView,
+  Text,
+  TextInput,
+  View,
+} from 'react-native';
 import globalStyles from './styles/global';
 import Cat from './components/Cat';
 import {catsList} from './helpers/mock';
@@ -22,6 +29,13 @@ const App = () => {
             onChangeText={text => setSearchTerm(text)}
             value={searchTerm}
           />
+          {/* <View>
+          <FlatList
+            data={filteredCatsList}
+            renderItem={({item}) => <Cat name={item.name} image={item.image} />}
+          />
+        </View> */}
+
           <View style={globalStyles.container}>
             {filteredCatsList.map((item, index) => {
               return <Cat key={index} name={item.name} image={item.image} />;
